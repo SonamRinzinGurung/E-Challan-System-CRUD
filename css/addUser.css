@@ -1,0 +1,13 @@
+body {
+    
+    padding:30px;
+
+}
+div{
+	padding: 5px;
+}
+@media(max-width: 600px){
+	#logo{
+		text-align: center;
+	}
+} 
