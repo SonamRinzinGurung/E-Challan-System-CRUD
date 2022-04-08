@@ -41,7 +41,7 @@ div{
       <!--Adding  green border  --> 
       <div class="col-sm-4 border border-success">
          <!--Connecting with PHP --> 
-        <form action="traffic-menu.html" method="post">
+        <form action="../backend/backend-traffic-login.php" method="post">
           <img src="img/logo.png" alt="Cinque Terre" width="80%">
           
              <!-- Making form group--> 
