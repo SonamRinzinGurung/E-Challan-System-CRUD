@@ -1,5 +1,10 @@
 <!-- This page is the hompage of the web application -->
-
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: index.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +53,7 @@
       <h1 class="text-uppercase text-light">e-challan</h1>
       <div class="logout">
 
-        <button class="btn btn-outline-danger btn-lg"> <a style="text-decoration:none" href="index.html">Log Out</a>   </button>
+        <button class="btn btn-outline-danger btn-lg"> <a style="text-decoration:none" href="../backend/backend-logout.php">Log Out</a>   </button>
       
       </div>
     </div>
@@ -66,8 +71,8 @@
    
       <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
           
-          <a href="adminregister.html" class="btn btn-outline-success btn-lg" style="margin: 12px;"> Create Admin User</a>
-          <a href="trafficregister.html" class="btn btn-outline-success btn-lg"> Create Traffic User</a> <br><br>
+          <a href="adminregister.php" class="btn btn-outline-success btn-lg" style="margin: 12px;"> Create Admin User</a>
+          <a href="trafficregister.php" class="btn btn-outline-success btn-lg"> Create Traffic User</a> <br><br>
       </div>
 <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
 
@@ -75,7 +80,7 @@
     <a href="trafficlogin.html" class="btn btn-outline-success btn-lg"> View Users</a><br>
 </div>
 <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
-    <a href="trafficlogin.html" class="btn btn-outline-success btn-lg" style="margin-top: 50px;"> Sign In Traffic User</a>
+    <a href="trafficlogin.php" class="btn btn-outline-success btn-lg" style="margin-top: 50px;"> Sign In Traffic User</a>
 </div>
 
    </div>
