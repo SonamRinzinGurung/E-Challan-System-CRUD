@@ -1,5 +1,10 @@
 <!-- This page is the hompage of the web application -->
-
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: index.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,7 +54,7 @@
       <h1 class="text-uppercase text-light">e-challan</h1>
       <div class="logout">
 
-        <button class="btn btn-outline-danger btn-lg"> <a style="text-decoration:none" href="index.html">Log Out</a>   </button>
+        <button class="btn btn-outline-danger btn-lg"> <a style="text-decoration:none" href="../backend/backend-logout.php">Log Out</a>   </button>
       
       </div>
     </div>

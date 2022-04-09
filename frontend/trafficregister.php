@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: index.html");
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +22,7 @@
 </head>
 
 <body>
-  <form action="#" method="post">
+  <form action="../backend/backend-registertraffic.php" method="post">
     <div class="container border border-success">
       <div class="row">
         <div class="col-sm-5">
@@ -65,6 +71,12 @@
           <label for="inputAddress"><strong>Username</strong><span style="color: red">*</span></label>
           <input type="text" class="form-control" placeholder="" name="username" required>
         </div>
+
+        <div class="form-group col-md-4">
+            <label for="inputAddress2"><strong>Password</strong><span style="color: red">*</span></label>
+            <input type="password" class="form-control" placeholder="" name="password" required>
+          </div>
+          
       </div>
 
       <div class="form-row">
@@ -76,16 +88,13 @@
           <label for="inputAddress2"><strong>Phone No.</strong><span style="color: red">*</span></label>
           <input type="text" class="form-control" placeholder="" name="phone_no" required>
         </div>
-        <div class="form-group col-md-4">
+        <!-- <div class="form-group col-md-4">
             <label for="inputAddress2"><strong>Post</strong><span style="color: red">*</span></label>
             <input type="text" class="form-control" placeholder="" name="postt" required>
-          </div>
+          </div> -->
+         
       </div>
       
-      <div class="form-group col-md-4">
-        <label for="inputAddress2"><strong>Password</strong><span style="color: red">*</span></label>
-        <input type="password" class="form-control" placeholder="" name="password" required>
-      </div>
              <!--Adding container for button-->
       <div class="container text-center">
          <!--Adding Create  button with the help of bootstrap --> 
@@ -94,7 +103,7 @@
        <!--Adding container for button--> 
       <div class="container text-left">
         <!--Adding go back to dashboard button with the help of bootstrap --> 
-        <a href="admin-menu.html" class="btn btn-info" role="button">Go back to Admin Dashboard</a>
+        <a href="admin-menu.php" class="btn btn-info" role="button">Go back to Admin Dashboard</a>
       </div>
     </div>
   </form>
