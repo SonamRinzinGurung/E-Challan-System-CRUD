@@ -8,6 +8,4 @@ $password = "";
 $database_name = "e-challan-db";
 
 //establishing a connection with MySQL databse
-$con = new mysqli($host,$location,$password,$database_name);
-
-?>
+$con = new mysqli($host, $location, $password, $database_name);

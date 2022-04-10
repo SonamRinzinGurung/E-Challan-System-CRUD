@@ -1,59 +1,66 @@
 <!-- Register new Traffic Police user -->
 
 <?php
-    session_start();
+session_start();
 
-    if (!isset($_SESSION['user'])) {
-        header("Location: ../frontend/index.php");
-    }
+//check if user is logged in
+if (!isset($_SESSION['user'])) {
+
+    //if user is not logged in, relocate the user to the index page
+    header("Location: ../frontend/index.php");
+}
+
 // if the Sign Up button is clicked
-if (isset($_POST['create'])){
+if (isset($_POST['create'])) {
 
 
-  //store the data from input fields into variables
-  $first_name = trim($_POST['first_name']);
-  $middle_name = trim($_POST['middle_name']);
-  $last_name = trim($_POST['last_name']);
-  $username = trim($_POST['username']);
-  $passw = trim($_POST['password']);
-  $gender = trim($_POST['gender']);
-  $address = $_POST['address'];
-  $phone_no = trim($_POST['phone_no']);
+    //store the data from input fields into variables
+    $first_name = trim($_POST['first_name']);
+    $middle_name = trim($_POST['middle_name']);
+    $last_name = trim($_POST['last_name']);
+    $username = trim($_POST['username']);
+    $passw = trim($_POST['password']);
+    $gender = trim($_POST['gender']);
+    $address = $_POST['address'];
+    $phone_no = trim($_POST['phone_no']);
 
 
 
     //include the file that establishes a databse connection
     include_once 'database_connect.php';
 
+    //check if username is already taken
     $query = "SELECT * FROM traffic_user where username = '$username'";
-	$result = mysqli_query($con, $query);
-	$count = mysqli_num_rows($result);
-	//checks if given username is valid or not
-	if ($count > 0) {
-		//changes url if username is not valid 
-		header("Location: ../frontend/trafficregister.php?error=Username already taken");
-		exit();
-	}else{
+    $result = mysqli_query($con, $query);
+    $count = mysqli_num_rows($result);
+    //checks if given username is valid or not
+    if ($count > 0) {
+
+        //refresh the page if username already exists
+        header("Location: ../frontend/trafficregister.php?error=Username already taken");
+        exit();
+    } else {
 
         //creating a query to insert the data into the database table of admin
         $q = "insert into traffic_user (first_name, middle_name, last_name, username,password,gender,address,phone_no)values('$first_name','$middle_name','$last_name','$username','$passw','$gender','$address','$phone_no')";
-       
-        // //passing the query through the established connection
-        // $con->query($q);
-        // header("Location: ../frontend/trafficregister.php?success=User added successfully");
-        // // on successful registration move to the login page
-        // header("Location: adminlogin.php");
-        // exit();
 
+        //if the data is inserted successfully into the database
         if (mysqli_query($con, $q)) {
-            header("Location: ../frontend/trafficregister.php?success=User added successfully");
-        } else {
-            header("Location: ../frontend/trafficregister.php?error=Error while adding user");
-        }
 
-}
-}else {
-	echo '<script>alert("Error while adding user!")</script>';
+            //refresh the page with updated url 
+            header("Location: ../frontend/trafficregister.php?success=User added successfully");
+            exit();
+        } else {
+
+            //if error while inserting into database
+            header("Location: ../frontend/trafficregister.php?error=Error while adding user");
+            exit();
+        }
+    }
+} else {
+    //if some error occured
+    header("Location: ../frontend/adminregister.php?error=Error while adding user");
+    exit();
 }
 
 ?>

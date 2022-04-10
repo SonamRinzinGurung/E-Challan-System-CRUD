@@ -7,6 +7,7 @@ session_start();
 
 
   //when the login button is clicked
+  //check if both fields have data
   if( isset($_POST['username']) && isset($_POST['password']) ) {
 
 
@@ -23,7 +24,7 @@ session_start();
 
 
 
-        //creating a query to select admin login information from the database
+        //creating a query to select traffic login information from the database
       $res=mysqli_query($con,"SELECT password FROM traffic_user WHERE username='$uname'");
       $row=mysqli_fetch_array($res);
 
@@ -32,10 +33,10 @@ session_start();
       //if specific row found
       if( $count == 1 && $row['password']==$password ) {
 
-        //set session variable of the admin user as the username
+        //set session variable of the traffic user as the username
         $_SESSION['user'] = $_POST['username'];
 
-        // on successful login head to the create challan page
+        // on successful login head to the traffic menu page
         header("Location: ../frontend/traffic-menu.php");
         exit();
         
@@ -48,9 +49,7 @@ session_start();
 
     
   }else {
-    //if incorrect credentials entered, relocate to the login page
+    //if fields are empty
     header("Location: ../frontend/trafficlogin.php?error=Invalid username or password");
     exit();
   }
-
-?>
