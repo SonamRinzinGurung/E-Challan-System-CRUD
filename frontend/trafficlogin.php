@@ -44,7 +44,7 @@
       <div class="col-sm-4 border border-success">
         <!--Connecting with PHP -->
         <form action="../backend/backend-traffic-login.php" method="post">
-          <img src="img/logo.png" alt="Cinque Terre" width="80%">
+          <img src="../img/logo.png" alt="logo" width="50%">
 
           <!-- Making form group-->
           <div class=" form-group">

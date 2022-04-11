@@ -44,7 +44,7 @@
 
         <!-- creating a form that is connected to the backend -->
         <form action="../backend/backend-admin-login.php" method="post">
-          <img src="img/logo.png" alt="Cinque Terre" width="80%">
+          <img src="../img/logo.png" alt="logo" width="50%">
 
           <!-- Making form group-->
           <div class=" form-group">

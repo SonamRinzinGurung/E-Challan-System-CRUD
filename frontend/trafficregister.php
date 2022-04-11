@@ -35,7 +35,7 @@ if (!isset($_SESSION['user'])) {
         <!-- Here in this column all form is grouped-->
         <div class="col-sm-4">
           <!--Adding logo of echallan system -->
-          <img src="img/logo.png" width="50%" height="100%">
+          <img src="../img/logo.png" width="50%" height="100%" alt="logo">
 
         </div>
       </div>
