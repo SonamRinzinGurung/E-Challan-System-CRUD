@@ -48,7 +48,7 @@ if (!isset($_SESSION['user'])) {
   <div>
 
     <h3 class="text-center text-uppercase">
-      Admin Menu
+      Traffic Menu
     </h3>
 
   </div>
