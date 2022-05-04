@@ -78,7 +78,7 @@
 
                 <td><a href="#" type="button" class="btn btn-outline-info">Edit</a></td>
                 <!--Using modal from bootstrap for popout-->
-                <td><a href="" type="button" data-toggle="modal" class="btn btn-outline-danger">Delete</a></td>
+                <td><a href="" type="button" data-target="#deleteModal<?php echo $row['challan_id'] ?>" data-toggle="modal" class="btn btn-outline-danger">Delete</a></td>
                 <!--Print button is connected with backend-->
                 <td> <a href="#" target="_blank" type="button" class="btn btn-outline-success">Print</a></td>
                  <!--Model is created and passed up to delete button with the help of ID-->
@@ -90,7 +90,7 @@
                       </div>
                     <!--This is the footer of model-->
                       <div class="modal-footer">
-                        <form action="#" method="post">
+                        <form action="../backend/backend-delete-challan.php?from=admin" method="post">
                           <input type="hidden" name="id" value="<?php echo $row['challan_id'] ?>">
                           <button name="delete_confirm" type="submit" class="btn btn-light">Ok</button>
                         </form>
