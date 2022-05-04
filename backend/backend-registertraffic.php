@@ -21,7 +21,11 @@ if (isset($_POST['create'])) {
     $username = trim($_POST['username']);
     $passw = trim($_POST['password']);
     $gender = trim($_POST['gender']);
-    $address = $_POST['address'];
+    $perma_province = $_POST['perma_province'];
+    $perma_address = $_POST['perma_address'];
+    $temp_province = $_POST['temp_province'];
+    $temp_address = $_POST['temp_address'];
+    $post_address = $_POST['post_address'];
     $phone_no = trim($_POST['phone_no']);
 
 
@@ -42,7 +46,7 @@ if (isset($_POST['create'])) {
     } else {
 
         //creating a query to insert the data into the database table of admin
-        $q = "insert into traffic_user (first_name, middle_name, last_name, username,password,gender,address,phone_no)values('$first_name','$middle_name','$last_name','$username','$passw','$gender','$address','$phone_no')";
+        $q = "insert into traffic_user (first_name, middle_name, last_name, username,password, gender, perma_province,perma_address,temp_province,temp_address,post_address,phone_no)values('$first_name','$middle_name','$last_name','$username','$passw','$gender','$perma_province','$perma_address','$temp_province','$temp_address','$post_address','$phone_no')";
 
         //if the data is inserted successfully into the database
         if (mysqli_query($con, $q)) {
@@ -59,7 +63,7 @@ if (isset($_POST['create'])) {
     }
 } else {
     //if some error occured
-    header("Location: ../frontend/adminregister.php?error=Error while adding user");
+    header("Location: ../frontend/trafficregister.php?error=Error while adding user");
     exit();
 }
 

@@ -30,7 +30,7 @@ if (!isset($_SESSION['user'])) {
 
   <!-- creating a form that is connected to the backend -->
   <form action="../backend/backend-registeradmin.php" method="post">
-    <div class="container border border-success">
+    <div class="container border">
       <div class="row">
         <div class="col-sm-5">
         </div>
@@ -88,19 +88,65 @@ if (!isset($_SESSION['user'])) {
 
 
       <div class="form-row">
+      <div class="">
+          <label for="inputState" class="" id=""><strong>Province</strong></label><br>
+          <select id="inputState" name="perma_province"  class="btn btn-primary dropdown-toggle " required>
+
+            <option> Province 1</option>
+            <option> Province 2</option>
+            <option> Province 3</option>
+            <option> Province 4</option>
+            <option> Province 5</option>
+            <option> Province 6</option>
+            <option> Province 7</option>
+          </select><br> <br>
+      
+        </div>
+
         <div class="form-group col-md-4">
-          <label for="inputAddress2"><strong>Address</strong><span style="color: red">*</span></label>
-          <input type="text" class="form-control" placeholder="" name="address">
+          <label for="inputAddress2"><strong>Permanent Address</strong><span style="color: red">*</span></label>
+          <input type="text" class="form-control" placeholder="" name="perma_address">
+        </div>
+        
+      </div>
+
+      <div class="form-row">
+        <div class="">
+          <label for="inputState" class="" id=""><strong>Province</strong></label><br>
+          <select id="inputState" name="temp_province"  class="btn btn-primary dropdown-toggle " required>
+
+            <option> Province 1</option>
+            <option> Province 2</option>
+            <option> Province 3</option>
+            <option> Province 4</option>
+            <option> Province 5</option>
+            <option> Province 6</option>
+            <option> Province 7</option>
+          </select><br> <br>
+      
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="inputAddress2"><strong>Temporary Address</strong><span style="color: red">*</span></label>
+          <input type="text" class="form-control" placeholder="" name="temp_address">
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+      <div class="form-group col-md-4">
+          <label for="inputAddress2"><strong>Post Address</strong><span style="color: red">*</span></label>
+          <input type="text" class="form-control" placeholder="" name="post_address">
         </div>
 
         <div class="form-group col-md-4">
           <label for="inputAddress2"><strong>Phone No.</strong><span style="color: red">*</span></label>
           <input type="text" class="form-control" placeholder="" name="phone_no" required>
         </div>
-
-
-
+         
       </div>
+
 
 
       <!--Adding container for button-->
