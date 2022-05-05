@@ -75,11 +75,11 @@ $result = mysqli_query($con, $query);
                    
 
                     <! --Edit button is connected with backend -->
-                    <td><a href="#" type="button"
+                    <td><a href="edit-user.php?id=<?= $row['id'] ?>" type="button"
                            class="btn btn-outline-info">Edit</a></td>
                            <! --Using modal from bootstrap for popout -->
                     <td><a href="#" type="button" class="btn btn-outline-danger"
-                           data-toggle="modal" >Delete</a></td>
+                           data-toggle="modal" data-target="#deleteModal<?php echo $row['id'] ?>">Delete</a></td>
                    <!-- Model is created and passed tp delete button with help of ID-->
                     <div class="modal fade" id="deleteModal<?php echo $row['id'] ?>" role="dialog">
                         <div class="modal-dialog modal-sm">
@@ -90,7 +90,7 @@ $result = mysqli_query($con, $query);
                                 </div>
                                 <!-- This is the footer of model-->
                                 <div class="modal-footer">
-                                    <form action="#" method="post">
+                                    <form action="../backend/backend-delete-user.php" method="post">
                                         <input type="hidden" name="id" value="<?php echo $row['id']?>">
                                         <button name="delete_confirm" type="submit" class="btn btn-light">Ok</button>
                                     </form>
