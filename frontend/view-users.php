@@ -32,7 +32,7 @@ $result = mysqli_query($con, $query);
 <body>
 <div class="container border">
 
-
+  
     <div class="table-responsive">
     <table class="table table-hover">
         <thead>
@@ -47,8 +47,8 @@ $result = mysqli_query($con, $query);
             <th scope="col">Address</th>
             <th scope="col">Post Address</th>
             <th scope="col">PhoneNumber</th>
-
-
+            
+            
 
         </tr>
         </thead>
@@ -56,7 +56,7 @@ $result = mysqli_query($con, $query);
         <?php
         //displays all data avaiable in database
         if ($result->num_rows > 0) {
-
+            
             while ($row = $result->fetch_assoc()) {
 
                 ?>
@@ -71,15 +71,15 @@ $result = mysqli_query($con, $query);
                     <td><?php echo $row["perma_address"]; ?></td>
                     <td><?php echo $row["post_address"]; ?></td>
                     <td><?php echo $row["phone_no"]; ?></td>
-
-
+                    
+                   
 
                     <! --Edit button is connected with backend -->
-                    <td><a href="#" type="button"
+                    <td><a href="edit-user.php?id=<?= $row['id'] ?>" type="button"
                            class="btn btn-outline-info">Edit</a></td>
                            <! --Using modal from bootstrap for popout -->
                     <td><a href="#" type="button" class="btn btn-outline-danger"
-                                  data-toggle="modal" data-target="#deleteModal<?php echo $row['id'] ?>">Delete</a></td>
+                           data-toggle="modal" data-target="#deleteModal<?php echo $row['id'] ?>">Delete</a></td>
                    <!-- Model is created and passed tp delete button with help of ID-->
                     <div class="modal fade" id="deleteModal<?php echo $row['id'] ?>" role="dialog">
                         <div class="modal-dialog modal-sm">
@@ -112,7 +112,7 @@ $result = mysqli_query($con, $query);
 </div>
     <!--Adding container for button-->
     <div class="container text-left">
-        <!--Adding go back to dashboard  button with the help of bootstrap -->
+        <!--Adding go back to dashboard  button with the help of bootstrap --> 
         <a href="admin-menu.php" class="btn btn-info" role="button">Go back to Admin Menu</a>
     </div>
 </div>
