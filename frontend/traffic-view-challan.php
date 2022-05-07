@@ -82,7 +82,7 @@ $result = mysqli_query($con, $query);
               <td><?php echo $row["violation_date"]; ?></td>
               <td><?php echo $row["fine_amount"]; ?></td>
 
-              <td><a href="#" class="btn btn-outline-info">Edit</a></td>
+              <td><a href="traffic-edit-challan.php?id=<?= $row['challan_id'] ?>" class="btn btn-outline-info">Edit</a></td>
               <td>
                  <!--Using modal from bootstrap for popout -->
                  <td><a href="" type="button" data-target="#deleteModal<?php echo $row['challan_id'] ?>" data-toggle="modal" class="btn btn-outline-danger">Delete</a></td>

@@ -76,7 +76,7 @@
                 <td><?php echo $row["created_by"]; ?></td>
 
 
-                <td><a href="#" type="button" class="btn btn-outline-info">Edit</a></td>
+                <td><a href="admin-edit-challan.php?id=<?= $row['challan_id'] ?>" type="button" class="btn btn-outline-info">Edit</a></td>
                 <!--Using modal from bootstrap for popout-->
                 <td><a href="" type="button" data-target="#deleteModal<?php echo $row['challan_id'] ?>" data-toggle="modal" class="btn btn-outline-danger">Delete</a></td>
                 <!--Print button is connected with backend-->
