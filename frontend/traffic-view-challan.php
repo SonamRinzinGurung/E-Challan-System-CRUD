@@ -21,12 +21,12 @@ $result = mysqli_query($con, $query);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!--Important links are imported -->
+   <!--Important links are imported --> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!--Connecting with CSS- -->
+  <!--Connecting with CSS- --> 
   <link rel="stylesheet" href="../css/addUser.css">
 
   <title>E-challan System</title>
@@ -37,13 +37,13 @@ $result = mysqli_query($con, $query);
   <div class="container border">
 
 
-      <!-- Adding table in order to view-->
+      <!-- Adding table in order to view--> 
        <div class="table-responsive">
     <table class="table table-hover">
       <thead>
         <tr>
            <!--Here in scope,the heading are placed -->
-
+          
           <th scope="col">Challan ID</th>
           <th scope="col">Full Name</th>
           <th scope="col">Place</th>
@@ -55,7 +55,7 @@ $result = mysqli_query($con, $query);
           <th scope="col">Violation Description</th>
           <th scope="col">Violation Date</th>
           <th scope="col">Fine (in Rs.)</th>
-
+         
 
 
         </tr>
@@ -64,12 +64,12 @@ $result = mysqli_query($con, $query);
         <?php
         //displays all data avaiable in database be fetching in the table
         if ($res = $result->num_rows > 0) {
-
+         
           while ($row = $result->fetch_assoc()) {
-
+          
         ?>
             <tr> <!--Connecting with back-end -->
-
+             
               <td><?php echo $row["challan_id"]; ?></td>
               <td><?php echo $row["name"]; ?></td>
               <td><?php echo $row["place"]; ?></td>
@@ -81,14 +81,14 @@ $result = mysqli_query($con, $query);
               <td><?php echo $row["violation_desc"]; ?></td>
               <td><?php echo $row["violation_date"]; ?></td>
               <td><?php echo $row["fine_amount"]; ?></td>
-
+         
               <td><a href="traffic-edit-challan.php?id=<?= $row['challan_id'] ?>" class="btn btn-outline-info">Edit</a></td>
               <td>
                  <!--Using modal from bootstrap for popout -->
-                 <td><a href="" type="button" data-target="#deleteModal<?php echo $row['challan_id'] ?>" data-toggle="modal" class="btn btn-outline-danger">Delete</a></td>
+                <a href="#" type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#deleteModal<?php echo $row['challan_id'] ?>">Delete</a>
               </td>
                <!--Print button is connected with backend -->
-              <td><a href="#" target="_blank" type="button" class="btn btn-outline-success">Print</a></td>
+              <td><a href="../backend/backend-print-challan.php?id=<?php echo $row['challan_id'] ?>" target="_blank" type="button" class="btn btn-outline-success">Print</a></td>
                  <!-- Model is created and passed tp delete button with help of ID-->
               <div class="modal fade" id="deleteModal<?php echo $row['challan_id'] ?>" role="dialog">
                 <div class="modal-dialog modal-sm">
@@ -98,7 +98,7 @@ $result = mysqli_query($con, $query);
                     </div>
                      <!-- This is the footer of model-->
                     <div class="modal-footer">
-                      <form action="../backend/backend-delete-challan.php?from=admin" method="post">
+                      <form action="../backend/backend-delete-challan.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $row['challan_id'] ?>">
                         <button name="delete_confirm" type="submit" class="btn btn-light">Ok</button>
                       </form>
@@ -119,7 +119,7 @@ $result = mysqli_query($con, $query);
   </div>
       <!--Adding container for button-->
     <div class="container text-left">
-       <!--Adding go to dashboard  button with the help of bootstrap -->
+       <!--Adding go to dashboard  button with the help of bootstrap --> 
       <a href="traffic-menu.php" class="btn btn-info" role="button">Go back to Traffic Menu</a>
     </div>
   </div>

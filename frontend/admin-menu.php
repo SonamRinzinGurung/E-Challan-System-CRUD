@@ -61,13 +61,13 @@ if (!isset($_SESSION['user'])) {
 
     <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
 
-      <a href="adminregister.php" class="btn btn-outline-success btn-lg" style="margin: 12px;"> Create Admin User</a>
-      <a href="trafficregister.php" class="btn btn-outline-success btn-lg"> Create Traffic User</a> <br><br>
+      <a href="adminregister.php" class="btn btn-outline-success btn-lg" style="margin: 12px;" title="Create New Admin User"> Create Admin User</a>
+      <a href="trafficregister.php" class="btn btn-outline-success btn-lg" title="Create New Traffic User"> Create Traffic User</a> <br><br>
     </div>
     <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
 
-      <a href="trafficlogin.html" class="btn btn-outline-success btn-lg" style="margin: 12px;"> View Challan</a>
-      <a href="trafficlogin.html" class="btn btn-outline-success btn-lg"> View Users</a><br>
+      <a href="admin-view-challan.php" class="btn btn-outline-success btn-lg" style="margin: 12px;" title="View, Edit, Delete, Print Challan"> View Challan</a>
+      <a href="view-users.php" class="btn btn-outline-success btn-lg" title="View, Update, Delete Traffic User"> View Users</a><br>
     </div>
     <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
       <a href="trafficlogin.php" class="btn btn-outline-success btn-lg" style="margin-top: 50px;"> Sign In Traffic User</a>

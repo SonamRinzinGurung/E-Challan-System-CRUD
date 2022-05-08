@@ -48,7 +48,7 @@ if (!isset($_SESSION['user'])) {
   <div>
 
     <h3 class="text-center text-uppercase">
-      Admin Menu
+      Traffic Menu
     </h3>
 
   </div>
@@ -58,8 +58,8 @@ if (!isset($_SESSION['user'])) {
 
     <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
 
-      <a href="#" class="btn btn-outline-success btn-lg" style="margin: 12px;"> Create Challan</a>
-      <a href="#" class="btn btn-outline-success btn-lg"> View Challan</a> <br><br>
+      <a href="create-challan.php" class="btn btn-outline-success btn-lg" style="margin: 12px;" title="Create New Chllan"> Create Challan</a>
+      <a href="traffic-view-challan.php" class="btn btn-outline-success btn-lg" title="View, Edit, Delete, Print Challan"> View Challan</a> <br><br>
     </div>
 
   </div>
