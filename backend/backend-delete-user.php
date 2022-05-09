@@ -14,11 +14,11 @@ $id = $_POST['id'];
 $sql = "DELETE from traffic_user WHERE id=$id";
 
 if ($con->query($sql) === true) {
-    header("Location: ../frontend/admin-view-users.php?success=Successfully Deleted");
+    header("Location: ../frontend/view-users.php?success=Successfully Deleted User");
 
 } else {
 
-    header("Location: ../frontend/admin-view-users.php?error=Error while deleting user");
+    header("Location: ../frontend/view-users.php?error=Error while deleting user");
 }
 
 // Close connection

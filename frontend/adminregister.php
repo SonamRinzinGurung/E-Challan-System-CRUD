@@ -33,6 +33,7 @@ if (!isset($_SESSION['user'])) {
     <div class="container border">
       <div class="row">
         <div class="col-sm-5">
+        <h1 class="display-5" >Register Admin User</h1>
         </div>
         <!-- Here in this column all form is grouped-->
         <div class="col-sm-4">
@@ -42,6 +43,15 @@ if (!isset($_SESSION['user'])) {
         </div>
       </div>
 
+
+      <!--displays error message if error occured-->
+      <?php if (isset($_GET['error'])) { ?>
+        <p class="error" style="color:red; text-align: center;"><?php echo $_GET['error']; ?></p>
+      <?php } ?>
+      <!--displays success message if successfully registered-->
+      <?php if (isset($_GET['success'])) { ?>
+        <p class="error" style="color:green; text-align: center;"><?php echo $_GET['success']; ?></p>
+      <?php } ?>
 
       <!-- Making form group-->
 

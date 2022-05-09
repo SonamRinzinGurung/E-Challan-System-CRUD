@@ -35,7 +35,7 @@ use Dompdf\Options;
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         
         <div class="container text-center">
- <img src="../img/logo.png" alt="E-CHALLAN Logo" width="50%" height="100%">
+ 
  <h1>CHALLAN RECEIPT</h1>
     </head>
 

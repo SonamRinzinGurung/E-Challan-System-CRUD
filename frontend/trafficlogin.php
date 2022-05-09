@@ -3,10 +3,6 @@
 <!DOCTYPE html>
 
 <head>
-  <!--cannot let user back to login page until logged out-->
-  <script type="text/javascript">
-    window.history.forward();
-  </script>
 
   <title>E-Challan System</title>
   <meta charset="utf-8">
@@ -39,12 +35,20 @@
   <div class="container ">
     <div class="row">
       <div class="col-sm-4 ">
-      </div>
-      <!--Adding  green border  -->
-      <div class="col-sm-4 border border-success">
-        <!--Connecting with PHP -->
-        <form action="../backend/backend-traffic-login.php" method="post">
-          <img src="../img/logo.png" alt="logo" width="50%">
+        </div>
+
+        <div class="col-sm-4 border">
+          <!--Connecting with PHP -->
+          <form action="../backend/backend-traffic-login.php" method="post">
+            <img src="../img/logo.png" alt="logo" width="50%">
+            <!--displays error message if required-->
+         <?php if (isset($_GET['error'])) { ?>
+           <p class="error" style="color:red; text-align: center;"><?php echo $_GET['error']; ?></p>
+         <?php } ?>
+         <!--displays success message if required-->
+         <?php if (isset($_GET['success'])) { ?>
+           <p class="error" style="color:green; text-align: center;"><?php echo $_GET['success']; ?></p>
+         <?php } ?>
 
           <!-- Making form group-->
           <div class=" form-group">

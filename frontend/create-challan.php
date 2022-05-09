@@ -37,7 +37,14 @@ if (!isset($_SESSION['user'])) {
         </div>
       </div>
 
-     
+      <!--displays error message if required-->
+      <?php if (isset($_GET['error'])) { ?>
+        <p class="error" style="color:red; text-align: center;"><?php echo $_GET['error']; ?></p>
+      <?php } ?>
+      <!--displays success message if required-->
+      <?php if (isset($_GET['success'])) { ?>
+        <p class="error" style="color:green; text-align: center;"><?php echo $_GET['success']; ?></p>
+      <?php } ?>
      
       <div class="form-row">
          <!--Here each row is further divided into 3 equal part- --> 

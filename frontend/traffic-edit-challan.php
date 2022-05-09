@@ -38,6 +38,7 @@ $data = mysqli_fetch_array($result);
       <div class="row">
        
         <div class="col-sm-5">
+        <h1 class="display-5" >Edit Challan Details</h1>
         </div>
         <div class="col-sm-4" id="logo">
            <!--Adding logo of echallan system -->

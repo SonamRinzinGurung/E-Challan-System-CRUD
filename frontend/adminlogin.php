@@ -39,12 +39,21 @@
     <div class="row">
       <div class="col-sm-4 ">
       </div>
-      <!--Adding  green border  -->
-      <div class="col-sm-4 border border-success">
+
+      <div class="col-sm-4 border">
 
         <!-- creating a form that is connected to the backend -->
         <form action="../backend/backend-admin-login.php" method="post">
           <img src="../img/logo.png" alt="logo" width="50%">
+
+       <!--displays error message if required-->
+       <?php if (isset($_GET['error'])) { ?>
+           <p class="error" style="color:red; text-align: center;"><?php echo $_GET['error']; ?></p>
+         <?php } ?>
+         <!--displays success message if required-->
+         <?php if (isset($_GET['success'])) { ?>
+           <p class="error" style="color:green; text-align: center;"><?php echo $_GET['success']; ?></p>
+         <?php } ?>
 
           <!-- Making form group-->
           <div class=" form-group">
