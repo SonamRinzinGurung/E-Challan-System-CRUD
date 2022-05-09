@@ -1,6 +1,5 @@
-<!-- This file is used to establish a connection to the MySQL database -->
-
 <?php
+// This file is used to establish a connection to the MySQL database
 
 $host = "localhost";
 $location = "root";
