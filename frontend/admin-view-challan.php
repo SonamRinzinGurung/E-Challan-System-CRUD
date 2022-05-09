@@ -126,6 +126,12 @@ $result = mysqli_query($con, $query);
      <!--Adding go back to dashboard button using bootstrap--> 
       <a href="admin-menu.php" class="btn btn-info" role="button">Go back to Admin Menu</a>
     </div>
+
+        <div class="float-right">
+
+          <a href="../backend/export_excel.php" class = "btn btn-success"> <strong>Export</strong> </a>
+        </div>
+    
   </div>
   </div>
 
