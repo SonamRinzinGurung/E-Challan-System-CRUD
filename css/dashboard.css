@@ -38,6 +38,9 @@
   .container{
     padding: 1px; 
   }
+  .body{
+    padding: 120px;
+  }
 
   footer {
     width: 100%;

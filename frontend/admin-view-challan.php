@@ -33,6 +33,17 @@ $result = mysqli_query($con, $query);
 <body>
   
   <div class="container border">
+  <h1 class="display-5" >Challan Details</h1>
+  
+   <!--displays error message if required-->
+   <?php if (isset($_GET['error'])) { ?>
+        <p class="error" style="color:red; text-align: center;"><?php echo $_GET['error']; ?></p>
+      <?php } ?>
+      <!--displays success message if required-->
+      <?php if (isset($_GET['success'])) { ?>
+        <p class="error" style="color:green; text-align: center;"><?php echo $_GET['success']; ?></p>
+      <?php } ?>
+
     <div class="table-responsive">
     <table class="table table-hover">
       <thead>
