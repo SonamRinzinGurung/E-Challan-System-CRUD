@@ -23,7 +23,7 @@ if (!isset($_SESSION['user'])) {
 <body>
   <form action="../backend/backend-create-challan.php" method="post">
     <div class="container border">
-   
+    <h1 class="display-5" >Create Challan</h1>
       <div class="row">
 
         <div class="col-sm-5">

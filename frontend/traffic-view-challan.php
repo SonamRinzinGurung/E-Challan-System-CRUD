@@ -35,8 +35,9 @@ $result = mysqli_query($con, $query);
 <body>
 
   <div class="container border">
-  <h1 class="display-5" >Challan Details</h1>
+    <img src="../img/logo.png" width= "100px"alt="" style="  display: block;margin-left: auto; margin-right: auto;">
 
+  <h1 class="display-5" >Challan Details</h1>
       <!-- Adding table in order to view--> 
        <div class="table-responsive">
     <table class="table table-hover">
