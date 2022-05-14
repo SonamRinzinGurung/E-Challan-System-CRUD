@@ -71,7 +71,7 @@ if (!isset($_SESSION['user'])) {
       <a href="view-users.php" class="btn btn-outline-success btn-lg" title="View, Update, Delete Traffic User"> View Users</a><br>
     </div>
     <div style="display: flex; align-items: center; column-gap: 100px; justify-content: center;">
-      <a href="trafficlogin.php" class="btn btn-outline-success btn-lg" style="margin-top: 50px;"> Sign In Traffic User</a>
+      <a href="../backend/backend-logout.php" class="btn btn-outline-success btn-lg" style="margin-top: 50px;"> Sign In Traffic User</a>
     </div>
 
   </div>
