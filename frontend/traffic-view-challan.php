@@ -35,7 +35,7 @@ $result = mysqli_query($con, $query);
 <body>
 
   <div class="container border">
-
+  <h1 class="display-5" >Challan Details</h1>
 
       <!-- Adding table in order to view--> 
        <div class="table-responsive">

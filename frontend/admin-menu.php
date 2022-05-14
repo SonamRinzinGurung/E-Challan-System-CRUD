@@ -40,6 +40,7 @@ if (!isset($_SESSION['user'])) {
 
 <body>
   <div class="header">
+  <img src="../img/logo.png" alt="logo" width="100px">
     <h1 class="text-uppercase text-light">e-challan</h1>
     <div class="logout">
 
