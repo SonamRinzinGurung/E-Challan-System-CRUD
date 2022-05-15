@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!--Important links are imported --> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!--Connecting with CSS- --> 
-  <link rel="stylesheet" href="../css/addUser.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <title>E-challan System</title>
+    <link rel="stylesheet" href="../css/addUser.css">
+
+    <title>E-challan System</title>
 </head>
 
 <body>
-  <div>
+<div class="container border border-success">
+    <div>
     
-    <center> <img src="../img/logo1.png" alt="logo" width="10%" class= "logo"></center>
-    <h1 class=" text bright">View-Challan</h1>
+        <center> <img src="../img/logo1.png" alt="logo" width="10%" class= "logo"></center>
+        <h1 class=" text bright">Traffic View Challan</h1>
+    
+      </div>
 
-  </div>
-  
-
-
-      <!-- Adding table in order to view--> 
-       <div class="table-responsive">
+    
+    <div class="table-responsive">
     <table class="table table-hover">
-      <thead>
+        <thead>
         <tr>
-          
-          <th scope="col">#</th>
-          <th scope="col">Full Name</th>
-          <th scope="col">Place</th>
-          <th scope="col">License No.</th>
-          <th scope="col">Vehicle Number</th>
-          <th scope="col">Vehicle Type</th>
-          <th scope="col">Phone Number</th>
-          <th scope="col">Description</th>
-          <th scope="col">Violation Type</th>
-          <th scope="col">Fine (in Rs.)</th>
-         
-
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Middle Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Permanent Province</th>
+            <th scope="col">Permanent Address</th>
+            <th scope="col">Temporary Province</th>
+            <th scope="col">Temporary Address</th>
+            <th scope="col">Post Address</th>
+            <th scope="col">PhoneNumber</th>
+            
+            
 
         </tr>
-      </thead>
-      <tbody>
-  
-            <tr> <!--Connecting with back-end -->
-    
-         <!---
-              <td><a href="#" class="btn btn-outline-info">Edit</a></td>-->
-              <td>
-                 <!--Using modal from bootstrap for popout -->
-                <a href="#" type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="">Delete</a>
-              </td>
-               <!--Print button is connected with backend -->
-              <td><a href="# " target="_blank" type="button" class="btn btn-outline-success">Print</a></td>
-
-            </tr>
+        </thead>
+        <tbody>
        
-      </tbody>
+                <tr>
+                   
+                   
+
+                    <! --Edit button is connected with backend -->
+                   <!---- <td><a href="" type="button"
+                           class="btn btn-outline-info">Edit</a></td>-->
+                          
+                    <td><a href="#" type="button" class="btn btn-outline-danger"
+                           data-toggle="modal" data-target="">Delete</a></td>
+                     <!--Print button is connected with backend -->
+                    <td><a href="# " target="_blank" type="button" class="btn btn-outline-success">Print</a></td>
+              
+                    </td>
+
+                </tr>
+                
+        </tbody>
     </table>
-  </div>
-      <!--Adding container for button-->
+</div>
+    <!--Adding container for button-->
     <div class="container text-left">
-       <!--Adding go to dashboard  button with the help of bootstrap --> 
-      <a href="traffic-menu.php" class="btn btn-info" role="button">Go back to Traffic Menu</a>
+        <!--Adding go back to dashboard  button with the help of bootstrap --> 
+        <a href="admin-menu.html" class="btn btn-info" role="button">Go back to Admin Menu</a>
     </div>
-  </div>
-  </div>
+</div>
+</div>
 
 </body>
-
-
 </html>
