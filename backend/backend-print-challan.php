@@ -97,7 +97,7 @@ use Dompdf\Options;
     </html>
 
 <?php
-    // takes all the html code from same file
+    
     $html = ob_get_clean();
     //enabling different options
     $options = new Options();
@@ -105,16 +105,16 @@ use Dompdf\Options;
     $options->set('isHtml5ParserEnabled', TRUE);
     $options->setIsRemoteEnabled(true);
 
-    //sets paper sie and orientation 
+    //sets paper size and orientation 
     $dompdf = new Dompdf($options);
     $dompdf->setPaper('a4', 'landscape');
 
-    //loading html code 
+    //load the html code 
     $dompdf->loadHtml($html, 'UTF-8');
-    //rendering loaded html codes
+    //rendering the html codes
     $dompdf->render();
 
-    //display pdf in browser tab
+    //display the pdf view in browser
     $dompdf->stream("challan-receipt-" . $user_data["license_no"], array("Attachment" => 0));
 
 ?>

@@ -1,5 +1,6 @@
 <?php
 
+//function to manage the lines in excel sheet
 function filterData(&$str){ 
     $str = preg_replace("/\t/", "\\t", $str); 
     $str = preg_replace("/\r?\n/", "\\n", $str); 
@@ -8,6 +9,7 @@ function filterData(&$str){
 
 $fileName = "challan-details_". date('Y-m-d') . ".xls";
 
+//heading of each table row
 $fields = array("Challan ID","Full Name","Place","License No.","Vehicle Number","Vehicle Type","Phone Number","Violation Type","Violation Description","Violation Date","Fine Amount","Created By");
 
 $excelData = implode("\t", array_values($fields)) . "\n";

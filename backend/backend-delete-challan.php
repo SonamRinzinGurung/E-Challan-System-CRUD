@@ -15,6 +15,7 @@ $challan_id = $_POST['id'];
 // Attempt update query execution
 $sql = "DELETE from challan WHERE challan_id=$challan_id";
 
+//check if query was executed successfully
 if ($con->query($sql) === true) {
 
     if(isset($_GET['from'])&&$_GET['from']=='admin'){
@@ -27,7 +28,7 @@ if ($con->query($sql) === true) {
 
 } else {
     if(isset($_GET['from'])&&$_GET['from']=='admin'){
-        header("Location: ../frontend/admin-view-challan.php?success=Error while deleting challan");
+        header("Location: ../frontend/admin-view-challan.php?error=Error while deleting challan");
 
     }else{
         header("Location: ../frontend/traffic-view-challan.php?error=Error while deleting challan");

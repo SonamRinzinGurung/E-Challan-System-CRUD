@@ -20,10 +20,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   $password = strip_tags($password);
   $password = htmlspecialchars($password);
 
-
-
-
-
   //creating a query to select admin login information from the database
   $res = mysqli_query($con, "SELECT password FROM admin WHERE username='$uname'");
   $row = mysqli_fetch_array($res);

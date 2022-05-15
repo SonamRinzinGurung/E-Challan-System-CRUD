@@ -14,9 +14,7 @@ if (!isset($_SESSION['user'])) {
 // if the Sign Up button is clicked
 if (isset($_POST['create'])) {
 
-
     //store the data from input fields into variables
-
 
     $first_name = trim($_POST['first_name']);
     $middle_name = trim($_POST['middle_name']);

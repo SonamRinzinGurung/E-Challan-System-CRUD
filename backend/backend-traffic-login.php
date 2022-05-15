@@ -5,7 +5,6 @@ session_start();
   // include the file that establishes a databse connection
   include 'database_connect.php';
 
-
   //when the login button is clicked
   //check if both fields have data
   if( isset($_POST['username']) && isset($_POST['password']) ) {
@@ -19,10 +18,6 @@ session_start();
     $password = trim($_POST['password']);
     $password = strip_tags($password);
     $password = htmlspecialchars($password);
-
-
-
-
 
         //creating a query to select traffic login information from the database
       $res=mysqli_query($con,"SELECT password FROM traffic_user WHERE username='$uname'");
@@ -47,7 +42,6 @@ session_start();
         exit();
       }
 
-    
   }else {
     //if fields are empty
     header("Location: ../frontend/trafficlogin.php?error=Invalid username or password");
