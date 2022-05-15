@@ -2,7 +2,7 @@
 //checks if user logged in or not
 session_start();
 include "database_connect.php";
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['traffic_user'])) {
 	header("Location: ../frontend/index.html");
 }
 //checks if user pressed Create button
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 	$violation_desc = trim($_POST['violation_desc']);
 	$violation_date = trim($_POST['violation_date']);
 
-	$created_by = $_SESSION['user'];
+	$created_by = $_SESSION['traffic_user'];
 	//checks validation of names
 	if (preg_match("/^[a-zA-z\s]+$/", $name)) {
 		//checks validation of vehicle number

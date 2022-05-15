@@ -1,13 +1,13 @@
 <?php
 //checks if user is logged in or not
 session_start();
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['traffic_user'])) {
   header("Location: index.html");
 }
 ?>
 <?php
 include "../backend/database_connect.php";
-$created_by = trim($_SESSION['user']);
+$created_by = trim($_SESSION['traffic_user']);
 $query = "SELECT * FROM challan WHERE created_by = '$created_by'";
 $result = mysqli_query($con, $query);
 ?>

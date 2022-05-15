@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['traffic_user'])) {
   header("Location: index.html");
 }
 include "../backend/database_connect.php";

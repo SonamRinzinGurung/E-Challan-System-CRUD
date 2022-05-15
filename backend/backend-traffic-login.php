@@ -34,7 +34,7 @@ session_start();
       if( $count == 1 && $row['password']==$password ) {
 
         //set session variable of the traffic user as the username
-        $_SESSION['user'] = $_POST['username'];
+        $_SESSION['traffic_user'] = $_POST['username'];
 
         // on successful login head to the traffic menu page
         header("Location: ../frontend/traffic-menu.php");

@@ -2,7 +2,7 @@
 <?php
 session_start();
 //check if user is logged in
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['traffic_user'])) {
 
   //redirect the user to the index page if they are not logged in
   header("Location: index.html");

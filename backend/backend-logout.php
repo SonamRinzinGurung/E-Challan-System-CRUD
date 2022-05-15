@@ -3,7 +3,7 @@
 <?php
 //checking if user is logged in or not
 session_start();
-if (!isset($_SESSION['user'])) {
+if (!isset($_SESSION['user']) && !isset($_SESSION['traffic_user'])){
 	header("Location: ../frontend/index.html");
 }
 
